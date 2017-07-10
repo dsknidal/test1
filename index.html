@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Git rocket</title>
+    
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Git Playground</h1>
+        <div class="row">
+            <div class="l_generator col-xs-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Random generator</div>
+                    <div class="panel-body">
+                        <h2>Random: <span id="l_generator_random_spot" >0</span></h2>
+                        <button id="l_generator_action" type="button" class="btn btn-info">Generer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="l_tax col-xs-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Tax calculator</div>
+                    <div class="panel-body">
+                        <input class="form-control" type="text" id="l_tax_total" placeholder="tax free total"/><br>
+                        <strong>Tax %20: <span id="l_tax_tax_spot" >0</span></strong><br>
+                        <strong>TTC: <span id="l_tax_ttc_spot" >0</span></strong><br><br>
+                        <button id="l_tax_action" type="button" class="btn btn-info">calculate</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="l_reverse col-xs-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">reverser 2.0</div>
+                    <div class="panel-body">
+                        <input class="form-control"  type="text" id="l_reverse_text" placeholder="string to reverse"/>
+                        <h2>reversed: <span id="l_reverse_spot" >esrever</span></h2>
+                        <button id="l_reverse_action" type="button" class="btn btn-info">Reverse</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>instructions</h2>
+
+            <div class="col-xs-4">
+                <h3>Generator</h3>
+                <ul>
+                    <li>filepath: src/generator.js</li>
+                    <li>target id = [l_generator_random_spot]</li>
+                    <li>action id = [l_generator_action]</li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <h3>Tax calculator</h3>
+                <ul>
+                    <li>filepath: src/taxer.js</li>
+                    <li>input tax id = [l_tax_total]</li>
+                    <li>target tax id = [l_tax_tax_spot]</li>
+                    <li>target ttc id = [l_tax_ttc_spot]</li>
+                    <li>action id = [l_tax_action]</li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <h3>Reverser</h3>
+                <ul>
+                    <li>filepath: src/reverse.js</li>
+                    <li>input reverse id = [l_reverse_total]</li>
+                    <li>target reverse id = [l_reverse_spot]</li>
+                    <li>action id = [l_tax_action]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/core.js"></script>
+    <!-- add your js includes here-->
+    <script src="src/reverse.js"></script>
+    <script src="src/generator.js"></script>
+    <script src="src/taxer.js"></script>
+</body>
+</html>
